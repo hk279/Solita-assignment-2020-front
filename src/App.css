@@ -1,0 +1,88 @@
+/* Header */
+
+.header {
+    display: inline-block;
+    background-color: whitesmoke;
+    border-radius: 0.5em;
+    padding: 2em;
+    margin: 1em;
+}
+.header-text {
+    margin: 0;
+}
+
+/* Search */
+
+.search {
+    margin: 1em;
+    display: inline-block;
+}
+.search-input {
+    border: 0;
+    border-radius: 0.5em;
+    padding: 1em 2em;
+}
+.search-submit {
+    border: 0;
+    display: inline-block;
+    text-align: center;
+    background-color: #82c8a0;
+    padding: 1em 2em;
+    cursor: pointer;
+    font-weight: bold;
+}
+.search-submit:hover {
+    background-color: lightseagreen;
+}
+
+/* Main content */
+.main-content {
+    background-color: whitesmoke;
+    border-radius: 0.5em;
+    margin: 1em;
+    padding: 2em;
+    width: fit-content;
+}
+.sort {
+    margin: 1em;
+}
+table {
+    margin: 1em;
+}
+th {
+    font-weight: bold;
+    padding: 0.5em;
+    text-align: left;
+}
+td {
+    padding: 0.5em;
+}
+
+/* Footer */
+
+.footer {
+    background-color: whitesmoke;
+    padding: 2em;
+}
+.github-button {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 1em;
+    max-width: 15em;
+    align-items: center;
+    padding: 0.5em;
+    cursor: pointer;
+}
+.github-button:hover {
+    background-color: aliceblue;
+}
+.github-button-icon {
+    flex: 1;
+    max-width: 4em;
+}
+.github-button-text {
+    flex: 2;
+    text-align: center;
+}
