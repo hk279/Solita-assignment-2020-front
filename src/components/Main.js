@@ -35,14 +35,31 @@ const Main = () => {
         }
     };
 
-    // A filter function to pass as a prop for the Search-component.
-    const filterNames = (value) => {
-        setFilter(value.toLowerCase());
+    const filterNames = () => {
+        return sortNames().filter((item) => item.name.toLowerCase().includes(filter));
     };
+
+    let content;
+
+    console.log(filterNames());
+    if (filterNames().length === 0) {
+        content = (
+            <tr>
+                <td>No matches found</td>
+            </tr>
+        );
+    } else {
+        content = filterNames().map((item) => (
+            <tr key={item.name}>
+                <td>{item.name}</td>
+                <td>{item.amount}</td>
+            </tr>
+        ));
+    }
 
     return (
         <>
-            <Search onChange={filterNames} />
+            <Search onChange={(value) => setFilter(value.toLowerCase())} />
             <div className="main-content">
                 <div className="sort">
                     <label>Sort: </label>
@@ -58,18 +75,7 @@ const Main = () => {
                             <th>Amount</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        {sortNames().map((item) => {
-                            if (item.name.toLowerCase().includes(filter)) {
-                                return (
-                                    <tr key={item.name}>
-                                        <td>{item.name}</td>
-                                        <td>{item.amount}</td>
-                                    </tr>
-                                );
-                            } else return null;
-                        })}
-                    </tbody>
+                    <tbody>{content}</tbody>
                 </table>
             </div>
         </>

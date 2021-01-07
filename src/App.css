@@ -44,7 +44,16 @@
     width: fit-content;
 }
 .sort {
-    margin: 1em;
+    margin: 0.5em;
+}
+select {
+    margin: 0.5em;
+}
+select,
+option {
+    padding: 0.5em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
 }
 table {
     margin: 1em;
