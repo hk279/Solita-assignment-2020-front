@@ -39,9 +39,14 @@ const Main = () => {
         return sortNames().filter((item) => item.name.toLowerCase().includes(filter));
     };
 
+    const totalNames = () => {
+        return filterNames().reduce((total, name) => {
+            return total + name.amount;
+        }, 0);
+    };
+
     let content;
 
-    console.log(filterNames());
     if (filterNames().length === 0) {
         content = (
             <tr>
@@ -75,7 +80,14 @@ const Main = () => {
                             <th>Amount</th>
                         </tr>
                     </thead>
-                    <tbody>{content}</tbody>
+                    <tbody>
+                        {content}
+                        <hr></hr>
+                        <tr className="total-row">
+                            <td>Total</td>
+                            <td>{totalNames()}</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </>

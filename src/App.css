@@ -66,6 +66,9 @@ th {
 td {
     padding: 0.5em;
 }
+.total-row {
+    font-weight: bold;
+}
 
 /* Footer */
 
