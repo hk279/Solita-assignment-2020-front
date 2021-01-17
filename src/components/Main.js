@@ -9,7 +9,7 @@ const Main = () => {
 
     // Get data on component mount.
     useEffect(() => {
-        const url = "http://localhost:3001";
+        const url = "http://solita-assignment.herokuapp.com/api/names";
         fetch(url)
             .then((res) => res.json())
             .then((data) => {

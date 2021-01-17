@@ -1,11 +1,8 @@
 /* Header */
 
 .header {
-    display: inline-block;
-    background-color: whitesmoke;
-    border-radius: 0.5em;
-    padding: 2em;
-    margin: 1em;
+    color: whitesmoke;
+    margin: 2em 2em 1em 2em;
 }
 .header-text {
     margin: 0;
@@ -14,7 +11,8 @@
 /* Search */
 
 .search {
-    margin: 1em;
+    text-align: center;
+    margin: 1em 2em;
     display: inline-block;
 }
 .search-input {
@@ -22,31 +20,16 @@
     border-radius: 0.5em;
     padding: 1em 2em;
 }
-.search-submit {
-    border: 0;
-    display: inline-block;
-    text-align: center;
-    background-color: #82c8a0;
-    padding: 1em 2em;
-    cursor: pointer;
-    font-weight: bold;
-}
-.search-submit:hover {
-    background-color: lightseagreen;
-}
 
 /* Main content */
 .main-content {
     background-color: whitesmoke;
     border-radius: 0.5em;
-    margin: 1em;
+    margin: 1em 2em;
     padding: 2em;
     width: fit-content;
 }
 .sort {
-    margin: 0.5em;
-}
-select {
     margin: 0.5em;
 }
 select,
@@ -54,9 +37,6 @@ option {
     padding: 0.5em;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
         "Droid Sans", "Helvetica Neue", sans-serif;
-}
-table {
-    margin: 1em;
 }
 th {
     font-weight: bold;
